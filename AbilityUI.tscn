@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnpslri0yyv8m"]
+
+[ext_resource type="Texture2D" uid="uid://gajki76lbr31" path="res://bluebarrier.png" id="1_20ruf"]
+
+[node name="AbilityUi" type="CanvasLayer"]
+
+[node name="Container" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+
+[node name="Ability1" type="HBoxContainer" parent="Container"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Container/Ability1"]
+layout_mode = 2
+texture = ExtResource("1_20ruf")
+expand_mode = 3
+
+[node name="Ability2" type="HBoxContainer" parent="Container"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Container/Ability2"]
+layout_mode = 2
+texture = ExtResource("1_20ruf")
+expand_mode = 3
+
+[node name="Ability3" type="HBoxContainer" parent="Container"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Container/Ability3"]
+layout_mode = 2
+texture = ExtResource("1_20ruf")
+expand_mode = 3

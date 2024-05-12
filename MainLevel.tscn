@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://ceke5gecmylxf"]
+
+[ext_resource type="PackedScene" uid="uid://bbdmxskrfy5bi" path="res://Character.tscn" id="1_ysn45"]
+[ext_resource type="Texture2D" uid="uid://gajki76lbr31" path="res://bluebarrier.png" id="2_06s0t"]
+[ext_resource type="PackedScene" uid="uid://b6s87kmhagvjn" path="res://GameCamera.tscn" id="2_mgvcx"]
+[ext_resource type="PackedScene" uid="uid://dnpslri0yyv8m" path="res://AbilityUI.tscn" id="3_ewele"]
+[ext_resource type="PackedScene" uid="uid://dgndbfob51451" path="res://AbilityController.tscn" id="5_di81d"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_htmfd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_330hl"]
+size = Vector2(141, 250)
+
+[node name="Level" type="Node2D"]
+
+[node name="Character" parent="." instance=ExtResource("1_ysn45")]
+
+[node name="GameCamera" parent="Character" instance=ExtResource("2_mgvcx")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-175, -243)
+physics_material_override = SubResource("PhysicsMaterial_htmfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-60.5, 115)
+shape = SubResource("RectangleShape2D_330hl")
+debug_color = Color(0.870588, 0.278431, 0.545098, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-60.5, 115)
+scale = Vector2(1.11719, 1.95312)
+texture = ExtResource("2_06s0t")
+
+[node name="AbilityUi" parent="." instance=ExtResource("3_ewele")]
+
+[node name="AbilityController" parent="." instance=ExtResource("5_di81d")]

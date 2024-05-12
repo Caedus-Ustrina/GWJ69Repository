@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbdmxskrfy5bi"]
+
+[ext_resource type="Script" path="res://Character.cs" id="1_rgjd5"]
+[ext_resource type="Texture2D" uid="uid://mwa7u4uan74n" path="res://placeholderman.png" id="2_4o3oq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_id45i"]
+
+[node name="Character" type="CharacterBody2D"]
+script = ExtResource("1_rgjd5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_id45i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_4o3oq")
