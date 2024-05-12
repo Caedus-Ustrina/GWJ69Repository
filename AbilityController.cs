@@ -21,14 +21,14 @@ public partial class AbilityController : Node2D
 		var uiContainer = this._abilityUI.GetNode<HBoxContainer>("Container");
 		switch (skill)
 		{
-			case Skills.Circle:
+			case Skills.Sweep:
 				uiContainer.GetNode<HBoxContainer>("Ability1").Modulate = Colors.Red;
 				break;
-			case Skills.Explosion:
-				uiContainer.GetNode<HBoxContainer>("Ability2").Modulate = Colors.AliceBlue;
+			case Skills.Fireball:
+				uiContainer.GetNode<HBoxContainer>("Ability2").Modulate = Colors.Red;
 				break;
 			case Skills.Dash:
-				uiContainer.GetNode<HBoxContainer>("Ability3").Modulate = Colors.AliceBlue;
+				uiContainer.GetNode<HBoxContainer>("Ability3").Modulate = Colors.Red;
 				break;
 			default:
 				return false;
@@ -40,7 +40,7 @@ public partial class AbilityController : Node2D
 
 public enum Skills
 {
-	Circle,
-	Explosion,
+	Sweep,
+	Fireball,
 	Dash
 }
