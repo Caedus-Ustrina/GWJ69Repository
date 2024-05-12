@@ -58,7 +58,17 @@ public partial class Character : CharacterBody2D
 	{
 		if(Input.IsActionJustPressed("ability_1"))
 		{
-			this._abilityController.UseAbility(Skills.Circle);
+			this._abilityController.UseAbility(Skills.Sweep);
 		}
-	}
+
+        if (Input.IsActionJustPressed("ability_2"))
+        {
+            this._abilityController.UseAbility(Skills.Fireball);
+        }
+
+        if (Input.IsActionJustPressed("ability_3"))
+        {
+            this._abilityController.UseAbility(Skills.Dash);
+        }
+    }
 }
